@@ -1,0 +1,13 @@
+{:paths ["src" "resources"]
+ :deps  {org.clojure/clojure      {:mvn/version "1.12.3"}
+         org.babashka/http-client {:mvn/version "0.4.22"}}
+ :aliases
+ {:cider
+  {:extra-deps {cider/cider-nrepl             {:mvn/version "0.58.0"}
+                ciderale/quick-reset          {:mvn/version "0.2.0"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "3.11.0"}}}
+
+  :dev
+  {:extra-paths ["dev" "test"]
+   :extra-deps  {lambdaisland/kaocha    {:mvn/version "1.91.1392"}
+                 org.clojure/test.check {:mvn/version "1.1.1"}}}}}
