@@ -7,9 +7,9 @@
 
 (defn -main [& args]
   (let [[day & _] args]
-    (printf "Day %02d\n" day)
+    (printf "\nDay %02d\n" day)
     (let [input (days/get-puzzle-input year day)]
-      (solve day input))))
+      (println "=>" (solve day input)))))
 
 (comment
   (-main 1)
