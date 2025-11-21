@@ -24,10 +24,11 @@
         url (date-based-url year day)
         session-cookie (format "session=%s" *session-id*)]
     (when-not (io/resource input-file)
-      (println "%s not found... downloading input file")
+      (print input-file "not found: downloading...")
       (->> (http/get url {:headers {"cookie" session-cookie}})
            :body
-           (f/spit-resource input-file)))
+           (f/spit-resource input-file))
+      (println "[done]"))
     (f/slurp-resource input-file)))
 
 (comment
