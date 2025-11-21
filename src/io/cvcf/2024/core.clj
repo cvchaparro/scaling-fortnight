@@ -10,8 +10,3 @@
     (printf "\nDay %02d\n" day)
     (let [input (days/get-puzzle-input year day)]
       (println "=>" (solve day input)))))
-
-(comment
-  (-main 1)
-
-  ::end)
